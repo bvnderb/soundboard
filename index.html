@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soundboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
-    
+    <div>
+        <h1 class="text-4xl text-center mt-16 font-bold text-sky-500">Hello Soundboard</h1>
+        <div class="flex justify-center items-center">
+            <button class="border-2 border-sky-500 px-4 py-2 my-4 background-sky-500 text-black"
+                onclick="playsound('sound1')">
+                Play me
+            </button>
+
+            <button class="border-2 border-sky-500 px-4 py-2 my-4">
+                Click me
+            </button>
+
+            <button class="border-2 border-sky-500 px-4 py-2 my-4">
+                Click me
+            </button>
+
+            <button class="border-2 border-sky-500 px-4 py-2 my-4">
+                Click me
+            </button>
+        </div>
+
+    </div>
+<script>
+    function playsound(sound) {
+        var audio = new Audio('sounds/' + sound + '.mp3');
+        audio.play();
+    }
+</script>
 </body>
+
 </html>
